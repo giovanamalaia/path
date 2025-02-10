@@ -21,9 +21,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem title="Timeline" id="n4C-zB-Uyo"/>
-                                    <tabBarItem title="New Moment" id="a0H-ez-0IY"/>
-                                    <tabBarItem title="Moments" id="5gQ-Ca-eSE"/>
+                                    <tabBarItem title="Timeline" image="clock.fill" catalog="system" id="n4C-zB-Uyo"/>
+                                    <tabBarItem title="New Moment" image="plus.circle.fill" catalog="system" id="a0H-ez-0IY"/>
+                                    <tabBarItem title="Moments" image="heart.circle.fill" catalog="system" id="5gQ-Ca-eSE"/>
                                 </items>
                             </tabBar>
                         </subviews>
@@ -56,6 +56,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clock.fill" catalog="system" width="128" height="123"/>
+        <image name="heart.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
