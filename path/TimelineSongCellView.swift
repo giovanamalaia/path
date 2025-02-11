@@ -9,6 +9,20 @@ import UIKit
 
 class TimelineSongCellView: UITableViewCell {
 
+    
+    @IBOutlet weak var profilePicture: UIImageView!
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    @IBOutlet weak var extraInformationLabel: UILabel!
+    
+    @IBOutlet weak var reactionButton: UIButton!
+    
+    @IBOutlet weak var albumCoverPicture: UIImageView!
+    
+    @IBOutlet weak var timelineMarker: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TimelineSongCellView" customModule="path" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="393" height="113"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -76,6 +76,14 @@
                 <constraint firstItem="Dm1-zc-mWF" firstAttribute="centerY" secondItem="jU3-ed-g7r" secondAttribute="centerY" id="vub-5Z-0T3"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="albumCoverPicture" destination="pFd-7i-8sH" id="xMH-uD-dtK"/>
+                <outlet property="extraInformationLabel" destination="z7H-rM-Jqt" id="Vxs-bx-fqM"/>
+                <outlet property="profilePicture" destination="jU3-ed-g7r" id="bPQ-sC-tKI"/>
+                <outlet property="reactionButton" destination="Dm1-zc-mWF" id="CwS-CO-Gmc"/>
+                <outlet property="statusLabel" destination="yc9-xE-Qm7" id="frX-g0-pgZ"/>
+                <outlet property="timelineMarker" destination="azM-lq-k9s" id="Lm0-SD-oDv"/>
+            </connections>
             <point key="canvasLocation" x="136.64122137404578" y="-239.78873239436621"/>
         </view>
     </objects>

@@ -9,6 +9,18 @@ import UIKit
 
 class TimelineCellView: UITableViewCell {
 
+    
+    @IBOutlet weak var profilePicture: UIImageView!
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    @IBOutlet weak var extraInformationLabel: UILabel!
+    
+    @IBOutlet weak var reactionButton: UIButton!
+    
+    @IBOutlet weak var timelineMarker: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -9,6 +9,14 @@ import UIKit
 
 class TimelineImageCellView: UITableViewCell {
 
+    
+    @IBOutlet weak var profilePicture: UIImageView!
+    
+    @IBOutlet weak var sharedPicture: UIImageView!
+    
+    @IBOutlet weak var reactionButton: UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

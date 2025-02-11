@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TimelineCellView" customModule="path" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -67,6 +67,13 @@
                 <constraint firstItem="nbg-xM-Dr6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pLn-SJ-L0S"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="extraInformationLabel" destination="O59-b5-m9r" id="20G-xC-1tp"/>
+                <outlet property="profilePicture" destination="Tch-j6-QbT" id="7ru-2L-cGk"/>
+                <outlet property="reactionButton" destination="zaU-SZ-DmE" id="Y1r-jD-bsZ"/>
+                <outlet property="statusLabel" destination="xPa-RH-B1e" id="Ih3-Pd-STS"/>
+                <outlet property="timelineMarker" destination="GbD-e4-QOl" id="XhP-aT-Vh4"/>
+            </connections>
             <point key="canvasLocation" x="171.75572519083968" y="-237.32394366197184"/>
         </view>
     </objects>
