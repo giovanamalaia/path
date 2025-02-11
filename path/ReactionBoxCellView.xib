@@ -42,13 +42,77 @@
                         </button>
                     </subviews>
                 </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JYQ-TF-Txy">
+                    <rect key="frame" x="5" y="51.666666666666664" width="230" height="91.333333333333343"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hvq-th-TUA">
+                            <rect key="frame" x="0.0" y="0.0" width="230" height="41.666666666666664"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UJc-hN-uau">
+                                    <rect key="frame" x="0.0" y="0.0" width="39.666666666666664" height="41.666666666666664"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UUx-YW-aDY">
+                                    <rect key="frame" x="47.666666666666671" y="0.0" width="39.666666666666671" height="41.666666666666664"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F6t-fM-wVo">
+                                    <rect key="frame" x="95.333333333333329" y="0.0" width="39.333333333333329" height="41.666666666666664"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L20-h4-hfB">
+                                    <rect key="frame" x="142.66666666666666" y="0.0" width="39.666666666666657" height="41.666666666666664"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fP1-s6-hWQ">
+                                    <rect key="frame" x="190.33333333333334" y="0.0" width="39.666666666666657" height="41.666666666666664"/>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="00e-AK-UsT">
+                            <rect key="frame" x="0.0" y="49.666666666666671" width="230" height="41.666666666666671"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VZS-6I-DJq">
+                                    <rect key="frame" x="0.0" y="0.0" width="39.666666666666664" height="41.666666666666664"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wm0-r2-1AF">
+                                    <rect key="frame" x="47.666666666666671" y="0.0" width="39.666666666666671" height="41.666666666666664"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pTB-js-nGY">
+                                    <rect key="frame" x="95.333333333333329" y="0.0" width="39.333333333333329" height="41.666666666666664"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fGe-Xl-YvY">
+                                    <rect key="frame" x="142.66666666666666" y="0.0" width="39.666666666666657" height="41.666666666666664"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yAQ-5f-dN8">
+                                    <rect key="frame" x="190.33333333333334" y="0.0" width="39.666666666666657" height="41.666666666666664"/>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="hvq-th-TUA" firstAttribute="height" secondItem="00e-AK-UsT" secondAttribute="height" id="cmE-Rj-mCb"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3W-Lm-xWA">
+                    <rect key="frame" x="9" y="151" width="99" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Comment"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zi-A8-bZn">
+                    <rect key="frame" x="146" y="151" width="78" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Repath"/>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="reE-si-HB9" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-10" id="Bn4-Cv-4XZ"/>
+                <constraint firstItem="JYQ-TF-Txy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="C5q-bq-FAN"/>
+                <constraint firstAttribute="bottom" secondItem="JYQ-TF-Txy" secondAttribute="bottom" constant="50" id="NEO-Of-hxN"/>
                 <constraint firstItem="reE-si-HB9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="YN7-Zb-ZCv"/>
                 <constraint firstItem="reE-si-HB9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="h5K-m8-vy4"/>
+                <constraint firstItem="JYQ-TF-Txy" firstAttribute="top" secondItem="reE-si-HB9" secondAttribute="bottom" constant="7.9999999999999929" id="iN8-wP-ACP"/>
                 <constraint firstItem="reE-si-HB9" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="sA3-iS-ila"/>
+                <constraint firstItem="JYQ-TF-Txy" firstAttribute="width" secondItem="reE-si-HB9" secondAttribute="width" id="v2d-D7-nhr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="138.93129770992365" y="20.774647887323944"/>
