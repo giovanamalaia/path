@@ -16,20 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IM0-Qg-Czh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IM0-Qg-Czh" userLabel="Timeline">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VPQ-Ls-Bxj">
-                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Timeline" image="clock.fill" catalog="system" id="n4C-zB-Uyo"/>
-                                    <tabBarItem title="New Moment" image="plus.circle.fill" catalog="system" id="a0H-ez-0IY"/>
-                                    <tabBarItem title="Moments" image="heart.circle.fill" catalog="system" id="5gQ-Ca-eSE"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,6 +30,7 @@
                             <constraint firstAttribute="bottom" secondItem="IM0-Qg-Czh" secondAttribute="bottom" id="yUp-8K-KoW"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Timeline" id="asA-gR-VnY"/>
                     <navigationItem key="navigationItem" title="Path" largeTitleDisplayMode="always" id="jYq-0Y-4wM"/>
                     <connections>
                         <outlet property="tableView" destination="IM0-Qg-Czh" id="JL3-Zb-Brj"/>
@@ -47,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1002.2900763358779" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1891" y="87"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j8B-xu-ASd">
@@ -60,18 +51,114 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cTc-LC-KhU"/>
+                        <segue destination="hCo-T0-iOO" kind="relationship" relationship="rootViewController" id="cTc-LC-KhU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPl-o5-Fj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75.572519083969468" y="-2.1126760563380285"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1AS-Xj-EjA">
+            <objects>
+                <viewController id="VBc-X0-QYl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="06Q-af-zT6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="What are you listening to?" translatesAutoresizingMaskIntoConstraints="NO" id="Jql-5y-gia">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="VBc-X0-QYl" id="S4y-bM-HJb"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="06y-IP-slD" userLabel="SongList">
+                                <rect key="frame" x="0.0" y="159" width="393" height="659"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FuX-P7-L09">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Music" id="YaC-6z-ahy"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yw2-7l-Ug4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="06y-IP-slD" firstAttribute="leading" secondItem="Yw2-7l-Ug4" secondAttribute="leading" id="7T0-e9-FEa"/>
+                            <constraint firstItem="06y-IP-slD" firstAttribute="top" secondItem="Jql-5y-gia" secondAttribute="bottom" id="G36-MZ-W0P"/>
+                            <constraint firstItem="Yw2-7l-Ug4" firstAttribute="trailing" secondItem="06y-IP-slD" secondAttribute="trailing" id="Kfd-hg-Dka"/>
+                            <constraint firstItem="Jql-5y-gia" firstAttribute="trailing" secondItem="Yw2-7l-Ug4" secondAttribute="trailing" id="LR0-WQ-7GR"/>
+                            <constraint firstItem="Jql-5y-gia" firstAttribute="leading" secondItem="Yw2-7l-Ug4" secondAttribute="leading" id="Pni-XJ-Zb7"/>
+                            <constraint firstItem="FuX-P7-L09" firstAttribute="leading" secondItem="Yw2-7l-Ug4" secondAttribute="leading" id="UdU-NS-7QI"/>
+                            <constraint firstItem="Jql-5y-gia" firstAttribute="top" secondItem="FuX-P7-L09" secondAttribute="bottom" id="gGU-rw-C6w"/>
+                            <constraint firstItem="Yw2-7l-Ug4" firstAttribute="bottom" secondItem="06y-IP-slD" secondAttribute="bottom" id="mSv-gT-ZH7"/>
+                            <constraint firstItem="Jql-5y-gia" firstAttribute="top" secondItem="FuX-P7-L09" secondAttribute="bottom" id="wSs-TC-Uuy"/>
+                            <constraint firstItem="FuX-P7-L09" firstAttribute="trailing" secondItem="Yw2-7l-Ug4" secondAttribute="trailing" id="zZI-xu-ljh"/>
+                            <constraint firstItem="FuX-P7-L09" firstAttribute="top" secondItem="Yw2-7l-Ug4" secondAttribute="top" id="zwk-9C-zx2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNI-SO-JXY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2582" y="-599"/>
+        </scene>
+        <!--New Moment-->
+        <scene sceneID="X0F-v5-GOK">
+            <objects>
+                <viewController id="WL7-k9-g3D" userLabel="New Moment" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="De2-o7-Ra6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FXJ-9w-0jr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="New Moment" id="hAO-HS-vjl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Prk-iS-ntG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1891" y="-599"/>
+        </scene>
+        <!--Moments-->
+        <scene sceneID="QRL-jc-EH0">
+            <objects>
+                <viewController id="tx3-DJ-YFu" userLabel="Moments" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kcn-ek-Mfr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="MrW-7d-2az"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Moments" id="0iT-IW-wui"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Rn-vZ-Wjs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1891" y="816"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pJb-cf-14d">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hCo-T0-iOO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9Px-4i-pCm"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g8S-zp-87w">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="g7o-Kl-3ug"/>
+                        <segue destination="WL7-k9-g3D" kind="relationship" relationship="viewControllers" id="f7T-Ci-ihZ"/>
+                        <segue destination="tx3-DJ-YFu" kind="relationship" relationship="viewControllers" id="6gQ-YX-VN7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ima-Oh-KdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002.2900763358779" y="-2.1126760563380285"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="clock.fill" catalog="system" width="128" height="123"/>
-        <image name="heart.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
