@@ -22,8 +22,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let songXib = UINib(nibName: "TimelineSongCellView", bundle: nil)
         tableView.register(songXib, forCellReuseIdentifier: "TimelineSongCellView")
         
-//        let imageXib = UINib(nibName: "TimelineImageCellView", bundle: nil)
-//        tableView.register(imageXib, forCellReuseIdentifier: "TimelineImageCellView")
+        let imageXib = UINib(nibName: "TimelineImageCellView", bundle: nil)
+        tableView.register(imageXib, forCellReuseIdentifier: "TimelineImageCellView")
         
         let defaultXib = UINib(nibName: "TimelineCellView", bundle: nil)
         tableView.register(defaultXib, forCellReuseIdentifier: "TimelineCellView")
@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // escolher aleatoriamente um tipo de célula
     func randomCellType() -> String {
-        let cellTypes = ["TimelineSongCellView", "TimelineCellView"]
+        let cellTypes = ["TimelineSongCellView", "TimelineCellView", "TimelineImageCellView"]
         return cellTypes.randomElement() ?? "TimelineCellView"
     }
 
@@ -49,19 +49,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 return UITableViewCell()
             }
             cell.profilePicture.image = UIImage(systemName: "circle.fill")
-            cell.albumCoverPicture.image = UIImage(systemName: "square.fill")
+            cell.albumCoverPicture.image = UIImage(named: "placehoder")
             return cell
             
-//        case "TimelineImageCellView":
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineImageCellView", for: indexPath) as? TimelineImageCellView else {
-//                return UITableViewCell()
-//            }
-//            return cell
+        case "TimelineImageCellView":
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineImageCellView", for: indexPath) as? TimelineImageCellView else {
+                return UITableViewCell()
+            }
+            cell.profilePicture.image = UIImage(systemName: "circle.fill")
+            cell.sharedPicture.image = UIImage(named: "placehoder")
+            return cell
             
         case "TimelineCellView":
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineCellView", for: indexPath) as? TimelineCellView else {
                 return UITableViewCell()
             }
+            cell.profilePicture.image = UIImage(systemName: "circle.fill")
             return cell
             
         default:
