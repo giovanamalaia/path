@@ -44,16 +44,16 @@
                     <buttonConfiguration key="configuration" style="filled" image="smiley.fill" catalog="system" cornerStyle="capsule"/>
                 </button>
                 <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vE3-gJ-Hx9" userLabel="WhatHappenedStack">
-                    <rect key="frame" x="103" y="29.333333333333332" width="155" height="54.333333333333343"/>
+                    <rect key="frame" x="103" y="16" width="155" height="81"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listening to [Song] by [Artist]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-xE-Qm7">
-                            <rect key="frame" x="0.0" y="0.0" width="155" height="36"/>
+                            <rect key="frame" x="0.0" y="0.0" width="155" height="53.666666666666664"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Album], [YYYY]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7H-rM-Jqt">
-                            <rect key="frame" x="0.0" y="40" width="91" height="14.333333333333336"/>
+                            <rect key="frame" x="0.0" y="57.666666666666679" width="91" height="23.333333333333336"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -63,6 +63,7 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="vE3-gJ-Hx9" secondAttribute="bottom" constant="16" id="0wm-Lq-9bR"/>
                 <constraint firstItem="vE3-gJ-Hx9" firstAttribute="leading" secondItem="azM-lq-k9s" secondAttribute="trailing" constant="16" id="24I-LN-ZEz"/>
                 <constraint firstItem="Dm1-zc-mWF" firstAttribute="leading" secondItem="pFd-7i-8sH" secondAttribute="trailing" constant="16" id="3nT-Dd-Eev"/>
                 <constraint firstItem="azM-lq-k9s" firstAttribute="leading" secondItem="jU3-ed-g7r" secondAttribute="trailing" constant="16" id="8nc-0x-VjA"/>
@@ -71,6 +72,7 @@
                 <constraint firstItem="pFd-7i-8sH" firstAttribute="centerY" secondItem="jU3-ed-g7r" secondAttribute="centerY" id="Rkl-nS-oPz"/>
                 <constraint firstItem="vE3-gJ-Hx9" firstAttribute="centerY" secondItem="jU3-ed-g7r" secondAttribute="centerY" id="Z6C-NJ-Sse"/>
                 <constraint firstAttribute="trailing" secondItem="Dm1-zc-mWF" secondAttribute="trailing" constant="16" id="dd4-pj-3do"/>
+                <constraint firstItem="vE3-gJ-Hx9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="g0w-ex-PnV"/>
                 <constraint firstItem="jU3-ed-g7r" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hfc-0t-4o0"/>
                 <constraint firstItem="pFd-7i-8sH" firstAttribute="leading" secondItem="vE3-gJ-Hx9" secondAttribute="trailing" constant="16" id="t81-o1-B9F"/>
                 <constraint firstItem="Dm1-zc-mWF" firstAttribute="centerY" secondItem="jU3-ed-g7r" secondAttribute="centerY" id="vub-5Z-0T3"/>
