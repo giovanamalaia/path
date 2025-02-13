@@ -9,6 +9,12 @@ import UIKit
 
 class PlaceCellView: UITableViewCell {
 
+    
+    @IBOutlet weak var placeName: UILabel!
+    
+    @IBOutlet weak var placeAddress: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

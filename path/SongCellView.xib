@@ -57,6 +57,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="albumCoverPicture" destination="dlV-ue-QWF" id="7EH-T7-aH5"/>
+                <outlet property="artistNameLabel" destination="eBF-Mb-ZSP" id="qdy-mM-WdB"/>
+                <outlet property="songNameLabel" destination="ktY-BH-dqM" id="J96-GA-5xy"/>
+            </connections>
             <point key="canvasLocation" x="148.85496183206106" y="30.985915492957748"/>
         </tableViewCell>
     </objects>

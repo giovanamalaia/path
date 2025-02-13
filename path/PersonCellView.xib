@@ -29,6 +29,9 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="K64-gf-mbN" secondAttribute="trailing" constant="16" id="bwr-JC-SOL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="contactName" destination="K64-gf-mbN" id="JbD-iI-QaO"/>
+            </connections>
             <point key="canvasLocation" x="136.64122137404578" y="-254.92957746478874"/>
         </view>
     </objects>

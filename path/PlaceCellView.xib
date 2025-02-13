@@ -46,6 +46,10 @@
                     <constraint firstItem="OHU-xp-LbB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="zaZ-XK-B6i"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="placeAddress" destination="iKo-IB-hdy" id="5zl-tP-TTw"/>
+                <outlet property="placeName" destination="50Q-v3-d7f" id="gW7-ds-Grf"/>
+            </connections>
             <point key="canvasLocation" x="138.1679389312977" y="20.422535211267608"/>
         </tableViewCell>
     </objects>
