@@ -13,8 +13,12 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="220"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CCm-dt-D9O" userLabel="BannerPicture">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CCm-dt-D9O" userLabel="BannerPicture">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="220"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="393" id="35O-cN-F1f"/>
+                        <constraint firstAttribute="height" constant="220" id="8bo-FR-612"/>
+                    </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hQp-z3-kOQ" userLabel="WhatHappenedStack">
                     <rect key="frame" x="103.00000000000001" y="159" width="150.33333333333337" height="32.333333333333343"/>

@@ -12,12 +12,15 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let headerXib = UINib(nibName: "TimelineHeaderCellView", bundle: nil)
+        tableView.register(headerXib, forCellReuseIdentifier: "TimelineHeaderCellView")
         
         let songXib = UINib(nibName: "TimelineSongCellView", bundle: nil)
         tableView.register(songXib, forCellReuseIdentifier: "TimelineSongCellView")
@@ -34,15 +37,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cellTypes = ["TimelineSongCellView", "TimelineCellView", "TimelineImageCellView"]
         return cellTypes.randomElement() ?? "TimelineCellView"
     }
-
+    
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 11
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            // primeira cell sendo header
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineHeaderCellView", for: indexPath) as? TimelineHeaderCellView else {
+                return UITableViewCell()
+            }
+            cell.profilePicture.image = UIImage(systemName: "circle.fill")
+            cell.bannerPicture.image = UIImage(named: "banner")
+            //cell.bannerPicture.backgroundColor = .red
+            return cell
+        }
+        
         let cellType = randomCellType()
-
+        
         switch cellType {
         case "TimelineSongCellView":
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineSongCellView", for: indexPath) as? TimelineSongCellView else {
@@ -77,7 +91,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("Célula \(indexPath.row) selecionada")
