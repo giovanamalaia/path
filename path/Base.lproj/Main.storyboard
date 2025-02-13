@@ -62,7 +62,7 @@
         <!--SongPost-->
         <scene sceneID="1AS-Xj-EjA">
             <objects>
-                <viewController id="VBc-X0-QYl" userLabel="SongPost" sceneMemberID="viewController">
+                <viewController id="VBc-X0-QYl" userLabel="SongPost" customClass="SongPostView" customModule="path" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="06Q-af-zT6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,7 +109,7 @@
         <!--PeoplePost-->
         <scene sceneID="fP4-D5-ddf">
             <objects>
-                <viewController id="zNp-xV-jeA" userLabel="PeoplePost" sceneMemberID="viewController">
+                <viewController id="zNp-xV-jeA" userLabel="PeoplePost" customClass="PeoplePostView" customModule="path" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q3L-UA-aDa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,7 +156,7 @@
         <!--PlacePost-->
         <scene sceneID="CFP-D6-ruw">
             <objects>
-                <viewController id="vra-Rd-ZSd" userLabel="PlacePost" sceneMemberID="viewController">
+                <viewController id="vra-Rd-ZSd" userLabel="PlacePost" customClass="PlacePostView" customModule="path" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8cV-b5-xVy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,8 +247,8 @@
                                     <navigationItem title="Post" id="RGR-w2-TBG"/>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nL5-0s-LfP" userLabel="ProfilePicture">
-                                <rect key="frame" x="16" y="124" width="73" height="67"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nL5-0s-LfP" userLabel="ProfilePicture">
+                                <rect key="frame" x="16" y="103" width="73" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="gPX-VY-xzc"/>
                                 </constraints>
@@ -279,10 +279,10 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVw-bh-dU9">
-                                <rect key="frame" x="16" y="492" width="74" height="74"/>
+                                <rect key="frame" x="16" y="492" width="73" height="74"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3p-ud-LFm">
-                                <rect key="frame" x="16" y="574" width="74" height="74"/>
+                                <rect key="frame" x="16" y="574" width="73" height="74"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ymm-tW-Yoz">
                                 <rect key="frame" x="195" y="492" width="182" height="156"/>
