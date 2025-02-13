@@ -74,12 +74,6 @@
                                     <outlet property="delegate" destination="VBc-X0-QYl" id="S4y-bM-HJb"/>
                                 </connections>
                             </searchBar>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FuX-P7-L09">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <items>
-                                    <navigationItem title="Music" id="YaC-6z-ahy"/>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jak-qG-iGL">
                                 <rect key="frame" x="0.0" y="159" width="393" height="693"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -92,15 +86,12 @@
                             <constraint firstItem="Jql-5y-gia" firstAttribute="trailing" secondItem="Yw2-7l-Ug4" secondAttribute="trailing" id="LR0-WQ-7GR"/>
                             <constraint firstItem="Jql-5y-gia" firstAttribute="leading" secondItem="Yw2-7l-Ug4" secondAttribute="leading" id="Pni-XJ-Zb7"/>
                             <constraint firstAttribute="bottom" secondItem="jak-qG-iGL" secondAttribute="bottom" id="QcE-dU-fkL"/>
-                            <constraint firstItem="FuX-P7-L09" firstAttribute="leading" secondItem="Yw2-7l-Ug4" secondAttribute="leading" id="UdU-NS-7QI"/>
-                            <constraint firstItem="Jql-5y-gia" firstAttribute="top" secondItem="FuX-P7-L09" secondAttribute="bottom" id="gGU-rw-C6w"/>
+                            <constraint firstItem="Jql-5y-gia" firstAttribute="top" secondItem="Yw2-7l-Ug4" secondAttribute="top" id="aaL-xW-v0r"/>
                             <constraint firstItem="jak-qG-iGL" firstAttribute="top" secondItem="Jql-5y-gia" secondAttribute="bottom" id="s98-Ho-kjg"/>
-                            <constraint firstItem="Jql-5y-gia" firstAttribute="top" secondItem="FuX-P7-L09" secondAttribute="bottom" id="wSs-TC-Uuy"/>
                             <constraint firstItem="jak-qG-iGL" firstAttribute="leading" secondItem="06Q-af-zT6" secondAttribute="leading" id="yoY-qB-5gb"/>
-                            <constraint firstItem="FuX-P7-L09" firstAttribute="trailing" secondItem="Yw2-7l-Ug4" secondAttribute="trailing" id="zZI-xu-ljh"/>
-                            <constraint firstItem="FuX-P7-L09" firstAttribute="top" secondItem="Yw2-7l-Ug4" secondAttribute="top" id="zwk-9C-zx2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Music" id="ztT-rT-ey5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNI-SO-JXY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,12 +105,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XO5-Vu-NlN">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <items>
-                                    <navigationItem title="People" id="gtO-3X-IXc"/>
-                                </items>
-                            </navigationBar>
                             <searchBar contentMode="redraw" placeholder="Who are you with?" translatesAutoresizingMaskIntoConstraints="NO" id="q8c-P1-XKR">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -135,19 +120,16 @@
                         <viewLayoutGuide key="safeArea" id="Ddw-Wf-c2V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="q8c-P1-XKR" firstAttribute="top" secondItem="XO5-Vu-NlN" secondAttribute="bottom" id="2pf-ga-0lV"/>
                             <constraint firstItem="q8c-P1-XKR" firstAttribute="trailing" secondItem="Ddw-Wf-c2V" secondAttribute="trailing" id="4a4-9z-L9f"/>
                             <constraint firstItem="93b-qU-m9j" firstAttribute="top" secondItem="q8c-P1-XKR" secondAttribute="bottom" id="D3u-Gb-bY2"/>
-                            <constraint firstItem="XO5-Vu-NlN" firstAttribute="leading" secondItem="Ddw-Wf-c2V" secondAttribute="leading" id="Ei4-jC-fdY"/>
                             <constraint firstItem="q8c-P1-XKR" firstAttribute="leading" secondItem="Ddw-Wf-c2V" secondAttribute="leading" id="JTC-zT-fsA"/>
                             <constraint firstItem="93b-qU-m9j" firstAttribute="trailing" secondItem="Q3L-UA-aDa" secondAttribute="trailing" id="UT6-bD-reB"/>
-                            <constraint firstItem="q8c-P1-XKR" firstAttribute="top" secondItem="XO5-Vu-NlN" secondAttribute="bottom" id="a2R-tL-45O"/>
-                            <constraint firstItem="XO5-Vu-NlN" firstAttribute="trailing" secondItem="Ddw-Wf-c2V" secondAttribute="trailing" id="tfn-IL-mq5"/>
+                            <constraint firstItem="q8c-P1-XKR" firstAttribute="top" secondItem="Ddw-Wf-c2V" secondAttribute="top" id="oFp-Fo-sDp"/>
                             <constraint firstItem="93b-qU-m9j" firstAttribute="bottom" secondItem="Q3L-UA-aDa" secondAttribute="bottom" id="wXY-tX-psm"/>
                             <constraint firstItem="93b-qU-m9j" firstAttribute="leading" secondItem="Q3L-UA-aDa" secondAttribute="leading" id="yPN-mp-GdJ"/>
-                            <constraint firstItem="XO5-Vu-NlN" firstAttribute="top" secondItem="Ddw-Wf-c2V" secondAttribute="top" id="zpc-20-rEG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="People" id="T6V-3O-Fb9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ipu-3J-6hr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,12 +143,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lev-xD-pW0">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <items>
-                                    <navigationItem title="Places" id="ATY-jI-gAB"/>
-                                </items>
-                            </navigationBar>
                             <searchBar contentMode="redraw" placeholder="Where are you?" translatesAutoresizingMaskIntoConstraints="NO" id="E9N-SU-ntO">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -178,11 +154,11 @@
                                 <rect key="frame" x="0.0" y="159" width="393" height="693"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bg5-50-fWP">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="252.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
                                         <standardMapConfiguration key="preferredConfiguration"/>
                                     </mapView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cWl-wU-jqq">
-                                        <rect key="frame" x="0.0" y="252.66666666666671" width="393" height="440.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="253" width="393" height="440"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -192,18 +168,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="E9N-SU-ntO" firstAttribute="leading" secondItem="23L-6D-efK" secondAttribute="leading" id="DcC-gN-WWJ"/>
-                            <constraint firstItem="Lev-xD-pW0" firstAttribute="trailing" secondItem="23L-6D-efK" secondAttribute="trailing" id="E8w-Ks-PCj"/>
-                            <constraint firstItem="E9N-SU-ntO" firstAttribute="top" secondItem="Lev-xD-pW0" secondAttribute="bottom" id="QhS-W1-7if"/>
-                            <constraint firstItem="Lev-xD-pW0" firstAttribute="top" secondItem="23L-6D-efK" secondAttribute="top" id="RJO-82-G92"/>
+                            <constraint firstItem="E9N-SU-ntO" firstAttribute="top" secondItem="23L-6D-efK" secondAttribute="top" id="Qhn-Zq-AmC"/>
                             <constraint firstItem="ueC-bH-A9Y" firstAttribute="leading" secondItem="23L-6D-efK" secondAttribute="leading" id="VfU-Mh-sHE"/>
-                            <constraint firstItem="Lev-xD-pW0" firstAttribute="leading" secondItem="23L-6D-efK" secondAttribute="leading" id="dcU-RB-NHB"/>
                             <constraint firstItem="ueC-bH-A9Y" firstAttribute="trailing" secondItem="23L-6D-efK" secondAttribute="trailing" id="hPi-9P-hPk"/>
-                            <constraint firstItem="E9N-SU-ntO" firstAttribute="top" secondItem="Lev-xD-pW0" secondAttribute="bottom" id="jnJ-YO-Ozu"/>
                             <constraint firstItem="E9N-SU-ntO" firstAttribute="trailing" secondItem="23L-6D-efK" secondAttribute="trailing" id="n2i-1Y-B7V"/>
                             <constraint firstAttribute="bottom" secondItem="ueC-bH-A9Y" secondAttribute="bottom" id="oVR-8c-F3N"/>
                             <constraint firstItem="ueC-bH-A9Y" firstAttribute="top" secondItem="E9N-SU-ntO" secondAttribute="bottom" id="w3O-QA-zYm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Places" id="yAN-If-NQr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTH-Ui-nCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,6 +201,7 @@
                         <viewLayoutGuide key="safeArea" id="tmY-ZC-cal"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3Wv-KA-jqU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWJ-2P-Y4C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -348,8 +322,51 @@
                     <view key="view" contentMode="scaleToFill" id="De2-o7-Ra6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="XDn-oR-Ay0">
+                                <rect key="frame" x="119.66666666666667" y="324.33333333333331" width="153.66666666666663" height="203.33333333333331"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNb-mg-ou6">
+                                        <rect key="frame" x="0.0" y="0.0" width="153.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="New Song Post"/>
+                                        <connections>
+                                            <segue destination="VBc-X0-QYl" kind="show" id="YtP-aS-GBl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64X-Ia-mIR">
+                                        <rect key="frame" x="0.0" y="56.333333333333371" width="153.66666666666666" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="New Person Post"/>
+                                        <connections>
+                                            <segue destination="zNp-xV-jeA" kind="show" id="pOG-3h-Wi2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjV-jN-YFo">
+                                        <rect key="frame" x="0.0" y="112.66666666666667" width="153.66666666666666" height="34.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="New Place Post"/>
+                                        <connections>
+                                            <segue destination="vra-Rd-ZSd" kind="show" id="zM6-qR-524"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfu-U8-ACz">
+                                        <rect key="frame" x="0.0" y="169" width="153.66666666666666" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="New Image Post"/>
+                                        <connections>
+                                            <segue destination="LFT-Kx-dFa" kind="show" id="DCE-WI-wKU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FXJ-9w-0jr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XDn-oR-Ay0" firstAttribute="centerY" secondItem="De2-o7-Ra6" secondAttribute="centerY" id="Xa0-po-Nqh"/>
+                            <constraint firstItem="XDn-oR-Ay0" firstAttribute="centerX" secondItem="De2-o7-Ra6" secondAttribute="centerX" id="o3f-f2-clN"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="New Moment" id="hAO-HS-vjl"/>
                 </viewController>
