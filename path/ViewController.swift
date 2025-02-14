@@ -29,6 +29,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let defaultXib = UINib(nibName: "TimelineCellView", bundle: nil)
         tableView.register(defaultXib, forCellReuseIdentifier: "TimelineCellView")
+        
+//        let reactionBoxXib = UINib(nibName: "ReactionBoxView", bundle: nil)
+//        tableView.register(reactionBoxXib, forCellReuseIdentifier: "ReactionBoxView")
     }
     
     // escolher aleatoriamente um tipo de célula

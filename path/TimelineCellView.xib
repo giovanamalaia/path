@@ -52,6 +52,9 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" image="smiley.fill" catalog="system" cornerStyle="capsule"/>
+                    <connections>
+                        <action selector="reactionButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="pbA-a7-CRv"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
