@@ -92,6 +92,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Music" id="ztT-rT-ey5"/>
+                    <connections>
+                        <outlet property="tableViewSongs" destination="jak-qG-iGL" id="9lj-14-Bh8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNI-SO-JXY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
