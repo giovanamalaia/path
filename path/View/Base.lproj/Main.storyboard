@@ -67,7 +67,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="What are you listening to?" translatesAutoresizingMaskIntoConstraints="NO" id="Jql-5y-gia">
+                            <searchBar contentMode="redraw" text="" placeholder="What are you listening to?" translatesAutoresizingMaskIntoConstraints="NO" id="Jql-5y-gia">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -93,6 +93,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Music" id="ztT-rT-ey5"/>
                     <connections>
+                        <outlet property="searchBarSong" destination="Jql-5y-gia" id="Lf0-O0-fix"/>
                         <outlet property="tableViewSongs" destination="jak-qG-iGL" id="9lj-14-Bh8"/>
                     </connections>
                 </viewController>

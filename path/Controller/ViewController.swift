@@ -63,7 +63,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 return UITableViewCell()
             }
             cell.profilePicture.image = UIImage(systemName: "circle.fill")
-            cell.albumCoverPicture.image = UIImage(named: "placehoder")
+            cell.albumCoverPicture.image = UIImage(named: "coverExpresso")
             return cell
             
         case "TimelineImageCellView":
