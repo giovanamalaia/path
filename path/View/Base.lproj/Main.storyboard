@@ -134,6 +134,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="People" id="T6V-3O-Fb9"/>
+                    <connections>
+                        <outlet property="searchBarPeople" destination="q8c-P1-XKR" id="Rnc-bs-mAa"/>
+                        <outlet property="tableViewPeople" destination="93b-qU-m9j" id="O3F-cq-zLe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ipu-3J-6hr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
