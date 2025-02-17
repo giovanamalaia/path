@@ -15,11 +15,21 @@ struct Song {
 
 struct SongData {
     static let songsList: [Song] = [
-        Song(name: "Expresso", artist: "Sabrina Carpenter", coverImage: "coverExpresso"),
+        Song(name: "Not Like Us", artist: "Kendrick Lamar", coverImage: "coverKendrick"),
+        Song(name: "Die With A Smile", artist: "Lady Gaga & Bruno Mars", coverImage: "coverBruno"),
+        Song(name: "APT.", artist: "ROSÉ & Bruno Mars", coverImage: "coverApt"),
+        Song(name: "Espresso", artist: "Sabrina Carpenter", coverImage: "coverExpresso"),
+        Song(name: "Please Please Please", artist: "Sabrina Carpenter", coverImage: "coverExpresso"),
+        Song(name: "We Can't Be Friends", artist: "Ariana Grande", coverImage: "coverAriana"),
+        Song(name: "Fortnight", artist: "Taylor Swift & Post Malone", coverImage: "coverTaylor"),
+        Song(name: "Too Sweet", artist: "Hozier", coverImage: "coverHozier"),
         Song(name: "BIRDS OF A FEATHER", artist: "Billie Eilish", coverImage: "coverBillie"),
-        Song(name: "Dance The Night", artist: "Dua Lipa", coverImage: "coverDua"),
-        Song(name: "Lover", artist: "Taylor Swift", coverImage: "coverTaylor"),
-        Song(name: "Save Your Tears", artist: "The Weeknd", coverImage: "coverWeeknd"),
-        Song(name: "Shivers", artist: "Ed Sheeran", coverImage: "coverEd")
-    ]
+        Song(name: "Yes, And?", artist: "Ariana Grande", coverImage: "coverAriana"),
+        Song(name: "Timeless", artist: "The Weeknd & Playboi Carti", coverImage: "coverTimeless"),
+        Song(name: "Blinding Lights", artist: "The Weeknd", coverImage: "coverTw"),
+        Song(name: "Abracadabra", artist: "Lady Gaga", coverImage: "coverGaga"),
+        Song(name: "Wildflower", artist: "Billie Eilish", coverImage: "coverBillie"),
+        Song(name: "DtMF", artist: "Bad Bunny", coverImage: "coverBad"),
+        Song(name: "That's So True", artist: "Gracie Abrams", coverImage: "coverGracie"),    ]
 }
+
