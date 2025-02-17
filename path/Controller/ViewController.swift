@@ -51,7 +51,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             cell.profilePicture.image = UIImage(systemName: "circle.fill")
             cell.bannerPicture.image = UIImage(named: "banner")
-            //cell.bannerPicture.backgroundColor = .red
             return cell
         }
         
@@ -62,8 +61,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineSongCellView", for: indexPath) as? TimelineSongCellView else {
                 return UITableViewCell()
             }
-            cell.profilePicture.image = UIImage(systemName: "circle.fill")
-            cell.albumCoverPicture.image = UIImage(named: "coverExpresso")
+            
+            if let song = SongData.songsList.randomElement() {
+                cell.profilePicture.image = UIImage(systemName: "circle.fill")
+                cell.albumCoverPicture.image = UIImage(named: song.coverImage) 
+                
+                cell.statusLabel.text = "Listening to \(song.name) by \(song.artist)"
+                cell.extraInformationLabel.text = "\(song.album), \(song.year)"
+            }
+            
             return cell
             
         case "TimelineImageCellView":
@@ -86,7 +92,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    // MARK: - UITableViewDelegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
