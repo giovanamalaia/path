@@ -1,17 +1,18 @@
-//
-//  ViewController.swift
-//  path
-//
-//  Created by Giovana Malaia on 07/02/25.
-//
-
-
+import Foundation
 import UIKit
+
+struct TimelinePost {
+    let type: String
+    let song: Song? // Usar Song? em vez de SongData?
+}
+
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
+
+    var timelinePosts: [TimelinePost] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,22 +31,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let defaultXib = UINib(nibName: "TimelineCellView", bundle: nil)
         tableView.register(defaultXib, forCellReuseIdentifier: "TimelineCellView")
         
+        generateTimelinePosts()
     }
     
-    // escolher aleatoriamente um tipo de célula
+    private func generateTimelinePosts() {
+        for _ in 1...10 {
+            let cellType = randomCellType()
+            
+            if cellType == "TimelineSongCellView" {
+                let song = SongData.songsList.randomElement() // Retorna Song?
+                timelinePosts.append(TimelinePost(type: cellType, song: song)) // Agora aceita Song?
+            } else {
+                timelinePosts.append(TimelinePost(type: cellType, song: nil))
+            }
+        }
+    }
+
+
     func randomCellType() -> String {
         let cellTypes = ["TimelineSongCellView", "TimelineCellView", "TimelineImageCellView"]
         return cellTypes.randomElement() ?? "TimelineCellView"
     }
-    
-    // MARK: - UITableViewDataSource
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 11
+        return timelinePosts.count + 1
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            // primeira cell sendo header
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineHeaderCellView", for: indexPath) as? TimelineHeaderCellView else {
                 return UITableViewCell()
             }
@@ -53,18 +66,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.bannerPicture.image = UIImage(named: "banner")
             return cell
         }
-        
-        let cellType = randomCellType()
-        
-        switch cellType {
+
+        let post = timelinePosts[indexPath.row - 1] // Agora pega o post fixo
+
+        switch post.type {
         case "TimelineSongCellView":
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineSongCellView", for: indexPath) as? TimelineSongCellView else {
                 return UITableViewCell()
             }
             
-            if let song = SongData.songsList.randomElement() {
+            if let song = post.song {
                 cell.profilePicture.image = UIImage(systemName: "circle.fill")
-                cell.albumCoverPicture.image = UIImage(named: song.coverImage) 
+                cell.albumCoverPicture.image = UIImage(named: song.coverImage)
                 
                 cell.statusLabel.text = "Listening to \(song.name) by \(song.artist)"
                 cell.extraInformationLabel.text = "\(song.album), \(song.year)"
@@ -77,7 +90,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 return UITableViewCell()
             }
             cell.profilePicture.image = UIImage(systemName: "circle.fill")
-            cell.sharedPicture.image = UIImage(named: "placehoder")
+            cell.sharedPicture.image = UIImage(named: "placeholder") // Imagem fixa
             return cell
             
         case "TimelineCellView":
@@ -91,17 +104,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return UITableViewCell()
         }
     }
-    
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
+
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("Célula \(indexPath.row) selecionada")
     }
-    
 }
-
-

@@ -21,16 +21,16 @@
                         <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="OHU-xp-LbB" userLabel="PlaceDetails">
-                        <rect key="frame" x="16" y="18.333333333333332" width="305.33333333333331" height="43.666666666666671"/>
+                        <rect key="frame" x="16" y="16" width="305.33333333333331" height="48"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Place Name]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50Q-v3-d7f">
-                                <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="20.333333333333332"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="[Place Name]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50Q-v3-d7f">
+                                <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="24.666666666666668"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Place Address]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-IB-hdy">
-                                <rect key="frame" x="0.0" y="23.333333333333336" width="120.66666666666667" height="20.333333333333336"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="[Place Address]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-IB-hdy">
+                                <rect key="frame" x="0.0" y="27.666666666666664" width="120.66666666666667" height="20.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,9 +39,11 @@
                     </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="OHU-xp-LbB" secondAttribute="bottom" constant="16" id="9nm-vC-Al3"/>
                     <constraint firstAttribute="trailing" secondItem="bf4-eF-UTd" secondAttribute="trailing" constant="16" id="GZ1-ot-ocu"/>
                     <constraint firstItem="bf4-eF-UTd" firstAttribute="leading" secondItem="OHU-xp-LbB" secondAttribute="trailing" constant="16" id="Me8-ds-ef7"/>
                     <constraint firstItem="bf4-eF-UTd" firstAttribute="centerY" secondItem="OHU-xp-LbB" secondAttribute="centerY" id="N26-jf-tfR"/>
+                    <constraint firstItem="OHU-xp-LbB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="abw-pq-FIy"/>
                     <constraint firstItem="OHU-xp-LbB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mC6-rD-yif"/>
                     <constraint firstItem="OHU-xp-LbB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="zaZ-XK-B6i"/>
                 </constraints>

@@ -185,6 +185,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Places" id="yAN-If-NQr"/>
+                    <connections>
+                        <outlet property="searchBarPlace" destination="E9N-SU-ntO" id="7xy-nc-Fqf"/>
+                        <outlet property="tableViewPlace" destination="cWl-wU-jqq" id="3nk-Gd-dD6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTH-Ui-nCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

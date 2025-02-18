@@ -23,7 +23,6 @@ struct SongData {
         Song(name: "Espresso", artist: "Sabrina Carpenter", coverImage: "coverExpresso", album: "Short n' Sweet", year: 2024),
         Song(name: "Please Please Please", artist: "Sabrina Carpenter", coverImage: "coverExpresso", album: "Short n' Sweet", year: 2024),
         Song(name: "We Can't Be Friends", artist: "Ariana Grande", coverImage: "coverAriana", album: "Eternal Sunshine", year: 2024),
-        Song(name: "Fortnight", artist: "Taylor Swift & Post Malone", coverImage: "coverTaylor", album: "The Tortured Poets Department", year: 2024 ),
         Song(name: "Too Sweet", artist: "Hozier", coverImage: "coverHozier", album: "Unheard", year: 2024),
         Song(name: "BIRDS OF A FEATHER", artist: "Billie Eilish", coverImage: "coverBillie", album: "Hit Me Hard and Soft", year: 2024 ),
         Song(name: "Yes, And?", artist: "Ariana Grande", coverImage: "coverAriana", album: "Eternal Sunshine", year: 2024),
@@ -31,7 +30,6 @@ struct SongData {
         Song(name: "Blinding Lights", artist: "The Weeknd", coverImage: "coverTw", album: "Blinding Lights", year: 2020),
         Song(name: "Abracadabra", artist: "Lady Gaga", coverImage: "coverGaga", album: "Abracadabra", year: 2025 ),
         Song(name: "Wildflower", artist: "Billie Eilish", coverImage: "coverBillie", album: "Hit Me Hard and Soft", year: 2024),
-        Song(name: "DtMF", artist: "Bad Bunny", coverImage: "coverBad", album: "DeBÍ TiRAR MáS FOToS", year: 2025),
         Song(name: "That's So True", artist: "Gracie Abrams", coverImage: "coverGracie", album: "The Secret of Us", year: 2024 ),    ]
 }
 
