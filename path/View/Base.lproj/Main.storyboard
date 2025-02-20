@@ -224,7 +224,7 @@
         <!--WritePost-->
         <scene sceneID="fzZ-1X-kD8">
             <objects>
-                <viewController id="ign-hO-sJW" userLabel="WritePost" customClass="WritePostView" customModule="path" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WritePostView" id="ign-hO-sJW" userLabel="WritePost" customClass="WritePostView" customModule="path" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wqi-ep-5QA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -49,6 +49,15 @@ class PlacePostView: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let writePostVC = storyboard.instantiateViewController(withIdentifier: "WritePostView") as? WritePostView {
+                navigationController?.pushViewController(writePostVC, animated: true)
+            }
+        }
+    
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
