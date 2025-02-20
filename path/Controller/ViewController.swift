@@ -32,6 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.register(defaultXib, forCellReuseIdentifier: "TimelineCellView")
         
         generateTimelinePosts()
+        
     }
     
     private func generateTimelinePosts() {

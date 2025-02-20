@@ -20,24 +20,24 @@
                         <constraint firstAttribute="width" constant="40" id="WtE-b3-mP9"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GbD-e4-QOl" userLabel="TimelineCircle">
-                    <rect key="frame" x="72" y="37.666666666666664" width="15" height="15"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SimpleTimelineMarker" translatesAutoresizingMaskIntoConstraints="NO" id="GbD-e4-QOl" userLabel="TimelineCircle">
+                    <rect key="frame" x="72" y="36.666666666666664" width="17" height="17"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="15" id="U5v-My-6xj"/>
-                        <constraint firstAttribute="width" constant="15" id="WZc-7n-H6n"/>
+                        <constraint firstAttribute="height" constant="17" id="U5v-My-6xj"/>
+                        <constraint firstAttribute="width" constant="17" id="WZc-7n-H6n"/>
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nbg-xM-Dr6" userLabel="WhatHappenedStack">
-                    <rect key="frame" x="103.00000000000001" y="16" width="150.33333333333337" height="58"/>
+                    <rect key="frame" x="105.00000000000001" y="29.000000000000004" width="150.33333333333337" height="32.333333333333343"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="What's happening" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPa-RH-B1e">
-                            <rect key="frame" x="0.0" y="0.0" width="150.33333333333334" height="43.666666666666664"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's happening" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPa-RH-B1e">
+                            <rect key="frame" x="0.0" y="0.0" width="150.33333333333334" height="18"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Extra info (time, place, etc)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O59-b5-m9r">
-                            <rect key="frame" x="0.0" y="43.666666666666664" width="150.33333333333334" height="14.333333333333336"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extra info (time, place, etc)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O59-b5-m9r">
+                            <rect key="frame" x="0.0" y="18" width="150.33333333333334" height="14.333333333333336"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -61,15 +61,13 @@
             <constraints>
                 <constraint firstItem="GbD-e4-QOl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2bX-bw-BV2"/>
                 <constraint firstItem="Tch-j6-QbT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8dQ-Lt-aXK"/>
-                <constraint firstItem="nbg-xM-Dr6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="Br6-iS-LDB"/>
-                <constraint firstItem="nbg-xM-Dr6" firstAttribute="leading" secondItem="GbD-e4-QOl" secondAttribute="trailing" constant="16" id="PgO-Lc-mKG"/>
+                <constraint firstItem="nbg-xM-Dr6" firstAttribute="centerY" secondItem="Tch-j6-QbT" secondAttribute="centerY" id="O04-hV-xtt"/>
                 <constraint firstItem="zaU-SZ-DmE" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-16" id="Wnu-Hq-BpA"/>
                 <constraint firstItem="GbD-e4-QOl" firstAttribute="centerY" secondItem="Tch-j6-QbT" secondAttribute="centerY" id="Zyz-em-pLt"/>
                 <constraint firstItem="Tch-j6-QbT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="haG-Qf-QJn"/>
                 <constraint firstItem="zaU-SZ-DmE" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="i2m-aN-o1f"/>
                 <constraint firstItem="GbD-e4-QOl" firstAttribute="leading" secondItem="Tch-j6-QbT" secondAttribute="trailing" constant="16" id="m1E-aK-Gmm"/>
-                <constraint firstAttribute="bottom" secondItem="nbg-xM-Dr6" secondAttribute="bottom" constant="16" id="mFo-hz-iu3"/>
-                <constraint firstItem="nbg-xM-Dr6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pLn-SJ-L0S"/>
+                <constraint firstItem="nbg-xM-Dr6" firstAttribute="leading" secondItem="GbD-e4-QOl" secondAttribute="trailing" constant="16" id="v3y-Fe-EUm"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
@@ -83,6 +81,7 @@
         </view>
     </objects>
     <resources>
+        <image name="SimpleTimelineMarker" width="15" height="15"/>
         <image name="smiley.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

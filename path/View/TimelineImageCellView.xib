@@ -20,14 +20,14 @@
                         <constraint firstAttribute="width" constant="40" id="yBd-9b-gTX"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="di8-Ks-IxT" userLabel="SquareFrame">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhotoFrame" translatesAutoresizingMaskIntoConstraints="NO" id="di8-Ks-IxT" userLabel="SquareFrame">
                     <rect key="frame" x="71" y="10" width="306" height="373"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jki-B5-hIP" userLabel="SharedPicture">
                     <rect key="frame" x="77" y="16" width="294" height="361"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SUT-5P-tCN" userLabel="FrameArrow">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MessageArrow" translatesAutoresizingMaskIntoConstraints="NO" id="SUT-5P-tCN" userLabel="FrameArrow">
                     <rect key="frame" x="56" y="37.666666666666664" width="15" height="15"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="15" id="MGq-I2-PVH"/>
@@ -74,6 +74,8 @@
         </view>
     </objects>
     <resources>
+        <image name="MessageArrow" width="16" height="16"/>
+        <image name="PhotoFrame" width="306" height="373"/>
         <image name="smiley.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
