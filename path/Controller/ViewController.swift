@@ -5,6 +5,7 @@ struct TimelinePost {
     let type: String
     let song: Song?
     let imageName: String?
+    let profilePictureName: String
 }
 
 
@@ -37,24 +38,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     private func generateTimelinePosts() {
-        for _ in 1...14 {
+        for _ in 1...10 {
             let cellType = randomCellType()
+            let randomProfilePicture = ProfilePictureData.profilePictures.randomElement() ?? "pf1"
 
             if cellType == "TimelineSongCellView" {
                 let song = SongData.songsList.randomElement()
-                timelinePosts.append(TimelinePost(type: cellType, song: song, imageName: nil))
+                timelinePosts.append(TimelinePost(type: cellType, song: song, imageName: nil, profilePictureName: randomProfilePicture))
 
             } else if cellType == "TimelineImageCellView" {
                 let randomImage = ImageData.imageList.randomElement() ?? "placeholder"
-                timelinePosts.append(TimelinePost(type: cellType, song: nil, imageName: randomImage))
+                timelinePosts.append(TimelinePost(type: cellType, song: nil, imageName: randomImage, profilePictureName: randomProfilePicture))
 
             } else {
-                timelinePosts.append(TimelinePost(type: cellType, song: nil, imageName: nil))
+                timelinePosts.append(TimelinePost(type: cellType, song: nil, imageName: nil, profilePictureName: randomProfilePicture))
             }
         }
     }
-
-
 
     func randomCellType() -> String {
         let cellTypes = ["TimelineSongCellView", "TimelineCellView", "TimelineImageCellView"]
@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineHeaderCellView", for: indexPath) as? TimelineHeaderCellView else {
                 return UITableViewCell()
             }
-            cell.profilePicture.image = UIImage(systemName: "circle.fill")
+            cell.profilePicture.image = UIImage(named: "user")
             cell.bannerPicture.image = UIImage(named: "banner")
             return cell
         }
@@ -84,7 +84,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
             if let song = post.song {
-                cell.profilePicture.image = UIImage(systemName: "circle.fill")
+                cell.profilePicture.image = UIImage(named: post.profilePictureName)
                 cell.albumCoverPicture.image = UIImage(named: song.coverImage)
                 
                 cell.statusLabel.text = "Listening to \(song.name) by \(song.artist)"
@@ -98,7 +98,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 return UITableViewCell()
             }
 
-            cell.profilePicture.image = UIImage(systemName: "circle.fill")
+            cell.profilePicture.image = UIImage(named: post.profilePictureName)
             if let imageName = post.imageName {
                 cell.sharedPicture.image = UIImage(named: imageName)
             } else {
@@ -110,7 +110,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineCellView", for: indexPath) as? TimelineCellView else {
                 return UITableViewCell()
             }
-            cell.profilePicture.image = UIImage(systemName: "circle.fill")
+            cell.profilePicture.image = UIImage(named: post.profilePictureName)
             return cell
             
         default:

@@ -21,3 +21,15 @@ struct ImageData {
         "img10"
     ]
 }
+
+struct ProfilePictureData {
+    static let profilePictures: [String] = [
+        "pf1",
+        "pf2",
+        "pf3",
+        "pf4",
+        "pf5",
+        "pf6"
+    ]
+}
+

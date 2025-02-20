@@ -37,14 +37,14 @@ class MomentsView: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
             if cellType == "TimelineSongCellView" {
                 let song = SongData.songsList.randomElement()
-                momentsPosts.append(TimelinePost(type: cellType, song: song, imageName: nil))
+                momentsPosts.append(TimelinePost(type: cellType, song: song, imageName: nil, profilePictureName: "user"))
 
             } else if cellType == "TimelineImageCellView" {
                 let randomImage = ImageData.imageList.randomElement() ?? "placeholder"
-                momentsPosts.append(TimelinePost(type: cellType, song: nil, imageName: randomImage))
+                momentsPosts.append(TimelinePost(type: cellType, song: nil, imageName: randomImage, profilePictureName: "user"))
 
             } else {
-                momentsPosts.append(TimelinePost(type: cellType, song: nil, imageName: nil))
+                    momentsPosts.append(TimelinePost(type: cellType, song: nil, imageName: nil, profilePictureName: "user"))
             }
         }
     }
@@ -68,7 +68,7 @@ class MomentsView: UIViewController, UITableViewDelegate, UITableViewDataSource{
             }
             
             if let song = post.song {
-                cell.profilePicture.image = UIImage(systemName: "circle.fill")
+                cell.profilePicture.image = UIImage(named: post.profilePictureName)
                 cell.albumCoverPicture.image = UIImage(named: song.coverImage)
                 
                 cell.statusLabel.text = "Listening to \(song.name) by \(song.artist)"
@@ -82,7 +82,7 @@ class MomentsView: UIViewController, UITableViewDelegate, UITableViewDataSource{
                 return UITableViewCell()
             }
 
-            cell.profilePicture.image = UIImage(systemName: "circle.fill")
+            cell.profilePicture.image = UIImage(named: post.profilePictureName)
             if let imageName = post.imageName {
                 cell.sharedPicture.image = UIImage(named: imageName)
             } else {
@@ -95,7 +95,7 @@ class MomentsView: UIViewController, UITableViewDelegate, UITableViewDataSource{
             guard let cell = tableViewMoments.dequeueReusableCell(withIdentifier: "TimelineCellView", for: indexPath) as? TimelineCellView else {
                 return UITableViewCell()
             }
-            cell.profilePicture.image = UIImage(systemName: "circle.fill")
+            cell.profilePicture.image = UIImage(named: post.profilePictureName)
             return cell
             
         default:

@@ -13,11 +13,13 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HOH-R1-luA" userLabel="ProfilePicture">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HOH-R1-luA" userLabel="ProfilePicture">
                     <rect key="frame" x="16" y="25" width="40" height="40"/>
                     <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="5rA-rN-ca6"/>
                         <constraint firstAttribute="height" constant="40" id="Bva-eo-Xfy"/>
                         <constraint firstAttribute="width" constant="40" id="yBd-9b-gTX"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="zOz-Hz-qv5"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhotoFrame" translatesAutoresizingMaskIntoConstraints="NO" id="di8-Ks-IxT" userLabel="SquareFrame">
