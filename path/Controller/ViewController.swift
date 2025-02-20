@@ -3,7 +3,8 @@ import UIKit
 
 struct TimelinePost {
     let type: String
-    let song: Song? // Usar Song? em vez de SongData?
+    let song: Song?
+    let imageName: String?
 }
 
 
@@ -36,17 +37,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     private func generateTimelinePosts() {
-        for _ in 1...10 {
+        for _ in 1...14 {
             let cellType = randomCellType()
-            
+
             if cellType == "TimelineSongCellView" {
-                let song = SongData.songsList.randomElement() // Retorna Song?
-                timelinePosts.append(TimelinePost(type: cellType, song: song)) // Agora aceita Song?
+                let song = SongData.songsList.randomElement()
+                timelinePosts.append(TimelinePost(type: cellType, song: song, imageName: nil))
+
+            } else if cellType == "TimelineImageCellView" {
+                let randomImage = ImageData.imageList.randomElement() ?? "placeholder"
+                timelinePosts.append(TimelinePost(type: cellType, song: nil, imageName: randomImage))
+
             } else {
-                timelinePosts.append(TimelinePost(type: cellType, song: nil))
+                timelinePosts.append(TimelinePost(type: cellType, song: nil, imageName: nil))
             }
         }
     }
+
 
 
     func randomCellType() -> String {
@@ -90,8 +97,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineImageCellView", for: indexPath) as? TimelineImageCellView else {
                 return UITableViewCell()
             }
+
             cell.profilePicture.image = UIImage(systemName: "circle.fill")
-            cell.sharedPicture.image = UIImage(named: "placeholder") // Imagem fixa
+            if let imageName = post.imageName {
+                cell.sharedPicture.image = UIImage(named: imageName)
+            } else {
+                cell.sharedPicture.image = UIImage(named: "placeholder")             }
+
             return cell
             
         case "TimelineCellView":

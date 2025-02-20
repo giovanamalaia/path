@@ -370,7 +370,7 @@
         <!--Moments-->
         <scene sceneID="QRL-jc-EH0">
             <objects>
-                <viewController id="tx3-DJ-YFu" userLabel="Moments" sceneMemberID="viewController">
+                <viewController id="tx3-DJ-YFu" userLabel="Moments" customClass="MomentsView" customModule="path" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kcn-ek-Mfr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -390,6 +390,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Moments" id="aLd-ZL-Jtr"/>
+                    <connections>
+                        <outlet property="tableViewMoments" destination="XJm-f7-A35" id="oLK-af-DPt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Rn-vZ-Wjs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
