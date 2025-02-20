@@ -197,7 +197,7 @@
         <!--ImagePost-->
         <scene sceneID="sE3-YL-awJ">
             <objects>
-                <viewController id="LFT-Kx-dFa" userLabel="ImagePost" sceneMemberID="viewController">
+                <viewController id="LFT-Kx-dFa" userLabel="ImagePost" customClass="ImagePostViewController" customModule="path" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lxj-UE-tVV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,6 +216,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="3Wv-KA-jqU"/>
+                    <connections>
+                        <outlet property="imagePost" destination="lxj-UE-tVV" id="g87-1m-aqV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWJ-2P-Y4C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
