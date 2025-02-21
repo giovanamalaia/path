@@ -54,7 +54,7 @@ class PlacePostView: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let writePostVC = storyboard.instantiateViewController(withIdentifier: "WritePostView") as? WritePostView {
-            writePostVC.selectedPlace = filteredPlaceList[indexPath.row]  // Passando o local selecionado
+            writePostVC.selectedPlace = filteredPlaceList[indexPath.row] 
             navigationController?.pushViewController(writePostVC, animated: true)
         }
     }

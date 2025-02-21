@@ -30,6 +30,9 @@ class MomentsView: UIViewController, UITableViewDelegate, UITableViewDataSource 
         NotificationCenter.default.addObserver(self, selector: #selector(handleNewSongPost(_:)), name: NSNotification.Name("NewSongPost"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleNewPlacePost(_:)), name: NSNotification.Name("NewPlacePost"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleNewPersonPost(_:)), name: NSNotification.Name("NewPersonPost"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNewImagePost(_:)), name: NSNotification.Name("NewImagePost"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNewTextPost(_:)), name: NSNotification.Name("NewTextPost"), object: nil)
+
 
         
         generateMomentsPosts()
@@ -65,6 +68,46 @@ class MomentsView: UIViewController, UITableViewDelegate, UITableViewDataSource 
             tableViewMoments.reloadData()
         }
     }
+    
+    @objc func handleNewTextPost(_ notification: Notification) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        let currentTime = dateFormatter.string(from: Date())
+        
+        if let text = notification.userInfo?["text"] as? String {
+            let newPost = TimelinePost(
+                type: "TimelineCellView",
+                song: nil,
+                place: nil,
+                person: nil,
+                imageName: nil,
+                profilePictureName: "user",
+                tweet: Tweet(text: text, time: currentTime, location: "Rio de Janeiro")
+            )
+            
+            momentsPosts.insert(newPost, at: 0)
+            tableViewMoments.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        }
+    }
+
+    
+    @objc func handleNewImagePost(_ notification: Notification) {
+        if let imageName = notification.userInfo?["imageName"] as? String {
+            let newPost = TimelinePost(
+                type: "TimelineImageCellView",
+                song: nil,
+                place: nil,
+                person: nil,
+                imageName: imageName,
+                profilePictureName: "user",
+                tweet: nil
+            )
+            
+            momentsPosts.insert(newPost, at: 0)
+            tableViewMoments.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        }
+    }
+
 
     @objc func handleNewPlacePost(_ notification: Notification) {
         if let place = notification.userInfo?["place"] as? Place {

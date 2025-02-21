@@ -10,10 +10,12 @@ import UIKit
 
 class WritePostView: UIViewController {
     
+    @IBOutlet weak var textFielPost: UITextField!
     @IBOutlet weak var shareButton: UIButton!
     var selectedSong: Song?
     var selectedPlace: Place?
     var selectedPerson: Person?
+    var selectedImageName: String?
 
     
     override func viewDidLoad() {
@@ -36,6 +38,15 @@ class WritePostView: UIViewController {
             NotificationCenter.default.post(name: NSNotification.Name("NewPlacePost"), object: nil, userInfo: ["place": selectedPlace])
         } else if let selectedPerson = selectedPerson {
             NotificationCenter.default.post(name: NSNotification.Name("NewPersonPost"), object: nil, userInfo: ["person": selectedPerson])
+        } else if let selectedImageName = selectedImageName {
+            NotificationCenter.default.post(name: NSNotification.Name("NewImagePost"), object: nil, userInfo: ["imageName": selectedImageName])
+        }else if let text = textFielPost.text, !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            NotificationCenter.default.post(name: NSNotification.Name("NewTextPost"), object: nil, userInfo: ["text": text])
+        } else {
+            let alert = UIAlertController(title: "No Content", message: "Please write a message before sharing.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
         }
 
         navigationController?.popToRootViewController(animated: true)

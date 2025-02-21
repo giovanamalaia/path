@@ -253,9 +253,11 @@
                                     <action selector="shareButtonTapped:" destination="ign-hO-sJW" eventType="touchUpInside" id="o6R-EN-YzX"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nL5-0s-LfP" userLabel="ProfilePicture">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="nL5-0s-LfP" userLabel="ProfilePicture">
                                 <rect key="frame" x="16" y="124" width="67" height="67"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="1sn-c3-a4k"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="FcM-8v-g0B"/>
                                     <constraint firstAttribute="width" constant="67" id="MU8-sR-KeS"/>
                                     <constraint firstAttribute="height" constant="67" id="QLi-OI-cea"/>
                                 </constraints>
@@ -290,6 +292,7 @@
                     <navigationItem key="navigationItem" title="Post" id="cCN-P4-0Rv"/>
                     <connections>
                         <outlet property="shareButton" destination="kmS-Jg-5Qr" id="iOB-9N-tam"/>
+                        <outlet property="textFielPost" destination="Lz2-h5-OIo" id="gGW-Eu-kAo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efp-Tv-4r6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -474,6 +477,7 @@
         <image name="person.2.fill" catalog="system" width="128" height="86"/>
         <image name="pin.fill" catalog="system" width="116" height="128"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="user" width="4000" height="6000"/>
         <namedColor name="LocationColor">
             <color red="0.31372549019607843" green="0.56470588235294117" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

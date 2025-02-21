@@ -12,7 +12,6 @@ struct TimelinePost {
 }
 
 
-
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
@@ -42,7 +41,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         NotificationCenter.default.addObserver(self, selector: #selector(handleNewSongPost(_:)), name: NSNotification.Name("NewSongPost"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleNewPlacePost(_:)), name: NSNotification.Name("NewPlacePost"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleNewPersonPost(_:)), name: NSNotification.Name("NewPersonPost"), object: nil)
-
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNewImagePost(_:)), name: NSNotification.Name("NewImagePost"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNewTextPost(_:)), name: NSNotification.Name("NewTextPost"), object: nil)
 
 
     }
@@ -71,13 +71,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    @objc func handleNewTextPost(_ notification: Notification) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        let currentTime = dateFormatter.string(from: Date())
+        
+        if let text = notification.userInfo?["text"] as? String {
+            let newPost = TimelinePost(
+                type: "TimelineCellView",
+                song: nil,
+                place: nil,
+                person: nil,
+                imageName: nil,
+                profilePictureName: "user",
+                tweet: Tweet(text: text, time: currentTime, location: "Rio de Janeiro")
+            )
+            timelinePosts.insert(newPost, at: 0)
+            tableView.insertRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
+        }
+    }
+
+    
     @objc func handleNewPersonPost(_ notification: Notification) {
         if let person = notification.userInfo?["person"] as? Person {
             let newPost = TimelinePost(
                 type: "TimelineCellView",
                 song: nil,
                 place: nil,
-                person: person, // Adicione a propriedade `person` no `TimelinePost`
+                person: person,
                 imageName: nil,
                 profilePictureName: "user",
                 tweet: nil
@@ -86,8 +107,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tableView.reloadData()
         }
     }
-
-
+    
+    @objc func handleNewImagePost(_ notification: Notification) {
+        if let imageName = notification.userInfo?["imageName"] as? String {
+            let newPost = TimelinePost(
+                type: "TimelineImageCellView",
+                song: nil,
+                place: nil,
+                person: nil,
+                imageName: imageName,
+                profilePictureName: "user",
+                tweet: nil
+            )
+            
+            timelinePosts.insert(newPost, at: 0)
+            tableView.insertRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
+        }
+    }
 
 
     private func generateTimelinePosts() {
