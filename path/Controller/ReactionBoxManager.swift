@@ -41,8 +41,11 @@ class ReactionBoxManager {
 
                 //constraints para ficar próximo do botao
                 NSLayoutConstraint.activate([
-                    reactionBoxView.topAnchor.constraint(equalTo: window.topAnchor, constant: buttonFrame.maxY + 5),
+                    reactionBoxView.topAnchor.constraint(equalTo: window.topAnchor, constant: buttonFrame.maxY),
+                    reactionBoxView.trailingAnchor.constraint(equalTo: window.leadingAnchor, constant: buttonFrame.maxX)
                 ])
+                
+
                 
                 self.reactionBox = reactionBoxView
                 self.backgroundOverlay = overlay
