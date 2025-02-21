@@ -51,11 +51,15 @@ class PeoplePostView: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        let selectedPerson = filteredContactList[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         if let writePostVC = storyboard.instantiateViewController(withIdentifier: "WritePostView") as? WritePostView {
+            writePostVC.selectedPerson = selectedPerson 
             navigationController?.pushViewController(writePostVC, animated: true)
         }
     }
+
     
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

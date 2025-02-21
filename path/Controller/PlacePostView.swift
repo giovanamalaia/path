@@ -50,15 +50,15 @@ class PlacePostView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            tableView.deselectRow(at: indexPath, animated: true)
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let writePostVC = storyboard.instantiateViewController(withIdentifier: "WritePostView") as? WritePostView {
-                navigationController?.pushViewController(writePostVC, animated: true)
-            }
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let writePostVC = storyboard.instantiateViewController(withIdentifier: "WritePostView") as? WritePostView {
+            writePostVC.selectedPlace = filteredPlaceList[indexPath.row]  // Passando o local selecionado
+            navigationController?.pushViewController(writePostVC, animated: true)
         }
-    
-    
+    }
+
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
             filteredPlaceList = PlaceData.placeList

@@ -38,7 +38,7 @@ struct TweetData {
         ]
 
         let locations = ["Rio de Janeiro", "São Paulo", "At Home", "Online", "New York", "Coffee Shop", "Beach", "Library"]
-        let orderedTimes = generateOrderedTimes(count: tweetTexts.count)
+        let orderedTimes = generateRandomTimes(count: tweetTexts.count)
 
         return tweetTexts.enumerated().map { index, text in
             Tweet(
@@ -49,25 +49,24 @@ struct TweetData {
         }
     }
 
-    private static func generateOrderedTimes(count: Int) -> [String] {
+    private static func generateRandomTimes(count: Int) -> [String] {
         var times: [String] = []
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "h:mm a" // Exemplo: 8:15 AM
-
-        var currentTime = Calendar.current.date(
-            bySettingHour: Int.random(in: 6...10),
-            minute: Int.random(in: 0..<60),
-            second: 0,
-            of: Date()
-        ) ?? Date()
+        dateFormatter.dateFormat = "h:mm a"
 
         for _ in 0..<count {
-            times.append(dateFormatter.string(from: currentTime))
-            currentTime = Calendar.current.date(byAdding: .minute, value: Int.random(in: 10...60), to: currentTime) ?? currentTime
+            let randomHour = Int.random(in: 0..<12)
+            let randomMinute = Int.random(in: 0..<60)
+            
+            if let randomDate = Calendar.current.date(bySettingHour: randomHour, minute: randomMinute, second: 0, of: Date()) {
+                times.append(dateFormatter.string(from: randomDate))
+            }
         }
 
         return times
     }
+
+
 }
 
 

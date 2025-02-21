@@ -36,15 +36,15 @@ class MomentsView: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
             if cellType == "TimelineSongCellView" {
                 let song = SongData.songsList.randomElement()
-                momentsPosts.append(TimelinePost(type: cellType, song: song, imageName: nil, profilePictureName: "user", tweet: nil))
+                momentsPosts.append(TimelinePost(type: cellType, song: song, place: nil, person: nil, imageName: nil, profilePictureName: "user", tweet: nil))
 
             } else if cellType == "TimelineImageCellView" {
                 let randomImage = ImageData.imageList.randomElement() ?? "placeholder"
-                momentsPosts.append(TimelinePost(type: cellType, song: nil, imageName: randomImage, profilePictureName: "user", tweet: nil))
+                momentsPosts.append(TimelinePost(type: cellType, song: nil, place: nil, person: nil, imageName: randomImage, profilePictureName: "user", tweet: nil))
 
             } else if cellType == "TimelineCellView" {
                 if let randomTweet = TweetData.tweetList.randomElement() {
-                    momentsPosts.append(TimelinePost(type: cellType, song: nil, imageName: nil, profilePictureName: "user", tweet: randomTweet))
+                    momentsPosts.append(TimelinePost(type: cellType, song: nil, place: nil, person: nil, imageName: nil, profilePictureName: "user", tweet: randomTweet))
                 }
             }
         }

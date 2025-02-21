@@ -55,11 +55,11 @@ class SongPostView: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let writePostVC = storyboard.instantiateViewController(withIdentifier: "WritePostView") as? WritePostView {
+            writePostVC.selectedSong = filteredSongsList[indexPath.row]
             navigationController?.pushViewController(writePostVC, animated: true)
         }
     }
-    
-    
+
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
             filteredSongsList = SongData.songsList
