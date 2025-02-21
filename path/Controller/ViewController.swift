@@ -6,8 +6,8 @@ struct TimelinePost {
     let song: Song?
     let imageName: String?
     let profilePictureName: String
+    let tweet: Tweet? // Agora é um objeto Tweet
 }
-
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -34,7 +34,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.register(defaultXib, forCellReuseIdentifier: "TimelineCellView")
         
         generateTimelinePosts()
-        
     }
     
     private func generateTimelinePosts() {
@@ -42,16 +41,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let cellType = randomCellType()
             let randomProfilePicture = ProfilePictureData.profilePictures.randomElement() ?? "pf1"
 
-            if cellType == "TimelineSongCellView" {
+            switch cellType {
+            case "TimelineSongCellView":
                 let song = SongData.songsList.randomElement()
-                timelinePosts.append(TimelinePost(type: cellType, song: song, imageName: nil, profilePictureName: randomProfilePicture))
+                timelinePosts.append(TimelinePost(type: cellType, song: song, imageName: nil, profilePictureName: randomProfilePicture, tweet: nil))
 
-            } else if cellType == "TimelineImageCellView" {
+            case "TimelineImageCellView":
                 let randomImage = ImageData.imageList.randomElement() ?? "placeholder"
-                timelinePosts.append(TimelinePost(type: cellType, song: nil, imageName: randomImage, profilePictureName: randomProfilePicture))
+                timelinePosts.append(TimelinePost(type: cellType, song: nil, imageName: randomImage, profilePictureName: randomProfilePicture, tweet: nil))
 
-            } else {
-                timelinePosts.append(TimelinePost(type: cellType, song: nil, imageName: nil, profilePictureName: randomProfilePicture))
+            case "TimelineCellView":
+                let randomTweet = TweetData.tweetList.randomElement()
+                timelinePosts.append(TimelinePost(type: cellType, song: nil, imageName: nil, profilePictureName: randomProfilePicture, tweet: randomTweet))
+
+            default:
+                break
             }
         }
     }
@@ -62,7 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return timelinePosts.count + 1
+        return timelinePosts.count + 1 
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,52 +79,57 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return cell
         }
 
-        let post = timelinePosts[indexPath.row - 1] // Agora pega o post fixo
+        let post = timelinePosts[indexPath.row - 1]
 
         switch post.type {
         case "TimelineSongCellView":
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineSongCellView", for: indexPath) as? TimelineSongCellView else {
                 return UITableViewCell()
             }
-            
+
             if let song = post.song {
                 cell.profilePicture.image = UIImage(named: post.profilePictureName)
                 cell.albumCoverPicture.image = UIImage(named: song.coverImage)
-                
                 cell.statusLabel.text = "Listening to \(song.name) by \(song.artist)"
                 cell.extraInformationLabel.text = "\(song.album), \(song.year)"
             }
-            
+
             return cell
-            
+
         case "TimelineImageCellView":
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineImageCellView", for: indexPath) as? TimelineImageCellView else {
                 return UITableViewCell()
             }
 
             cell.profilePicture.image = UIImage(named: post.profilePictureName)
-            if let imageName = post.imageName {
-                cell.sharedPicture.image = UIImage(named: imageName)
-            } else {
-                cell.sharedPicture.image = UIImage(named: "placeholder")             }
+            cell.sharedPicture.image = UIImage(named: post.imageName ?? "placeholder")
 
             return cell
-            
+
         case "TimelineCellView":
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineCellView", for: indexPath) as? TimelineCellView else {
                 return UITableViewCell()
             }
+
             cell.profilePicture.image = UIImage(named: post.profilePictureName)
+            if let tweet = post.tweet {
+                cell.statusLabel.text = tweet.text
+                cell.extraInformationLabel.text = "\(tweet.time), \(tweet.location)"
+            } else {
+                cell.statusLabel.text = "No tweet available."
+                cell.extraInformationLabel.text = ""
+            }
+
             return cell
-            
+
         default:
             return UITableViewCell()
         }
     }
-
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("Célula \(indexPath.row) selecionada")
     }
 }
+

@@ -16,10 +16,10 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tch-j6-QbT" userLabel="ProfilePicture">
                     <rect key="frame" x="16" y="25" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="ANo-hI-cnK"/>
                         <constraint firstAttribute="height" constant="40" id="JZZ-Ub-Oir"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="MC9-dE-hQR"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="LZk-WB-gD8"/>
                         <constraint firstAttribute="width" constant="40" id="WtE-b3-mP9"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="pEH-We-CIE"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SimpleTimelineMarker" translatesAutoresizingMaskIntoConstraints="NO" id="GbD-e4-QOl" userLabel="TimelineCircle">
